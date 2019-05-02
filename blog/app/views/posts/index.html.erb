@@ -1,0 +1,17 @@
+<h1> Blog</h1>
+
+<% @posts.each do |post| %>
+ 
+
+        <div class="card bg-light">
+            <h5 class="card-header"><%=  post.title%></h5>
+            <div class="card-body">
+                
+            <p class="card-text"><%= post.body%></p>
+            <%= link_to "Read More" ,post_path(post),{:class=>"btn btn-primary"}%>
+           
+            </div>
+        </div>
+    <hr>
+    
+<% end %>
