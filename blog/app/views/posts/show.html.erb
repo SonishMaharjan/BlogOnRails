@@ -3,12 +3,19 @@
 <div class="card">
     <h5 class="card-header"><%=  @post.title%></h5>
     <div class="card-body">
-        
-    <p class="card-text"><%= @post.body%></p>
-   
-    <%= link_to "Edit", edit_post_path(@post) ,{:class=>"btn btn-primary"}%>
-    <%= link_to "Delete", post_path(@post), method: :delete,
-                    data: {confirm:'Are you sure?'},
-                    :class=>"btn btn-danger"%>
+	        
+	    <p class="card-text"><%= @post.body%></p>
+	   
+	    <%= link_to "Edit", edit_post_path(@post) ,{:class=>"btn btn-primary"}%>
+	    <%= link_to "Delete", post_path(@post), method: :delete,
+	                    data: {confirm:'Are you sure?'},
+	                    :class=>"btn btn-danger"%>
+
+     </div>
 
 </div>
+<br>
+	<%= render 'comments/comments'%>
+
+<br>
+	<%= render 'comments/form'%>

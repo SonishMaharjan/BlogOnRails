@@ -1,0 +1,34 @@
+<div class="card">
+	<h5 class="card-header">Add Comment</h5>
+
+
+	<br>
+
+	
+
+	<div class="card-body">
+
+
+		<%= form_for([@post,@post.comments.new]) do |f|%>
+
+			<p>
+				<%= f.label :username %> <br>
+				<%= f.text_field(:username,{:class =>'form-control'}) %>
+
+
+			</p>
+
+			<p>
+				
+				<%= f.label :body %> <br>
+				<%= f.text_area(:body,{:class=>'form-control'}) %>
+			</p>
+			<p>
+				<%= f.submit "Add Comment",({ :class => 'btn btn-default'})%>
+			</p>
+
+		<% end%>
+	</div>
+	
+
+</div>
